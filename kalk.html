@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Динамічний калькулятор</title>
+  <style>
+    .calculator {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+    }
+
+    .buttons button {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <div class="buttons">
+      <button class="number">1</button>
+      <button class="number">2</button>
+      <button class="number">3</button>
+      <button class="operation">+</button>
+      <button class="number">4</button>
+      <button class="number">5</button>
+      <button class="number">6</button>
+      <button class="operation">-</button>
+      <button class="number">7</button>
+      <button class="number">8</button>
+      <button class="number">9</button>
+      <button class="operation">*</button>
+      <button class="number">0</button>
+      <button class="operation">/</button>
+      <button id="calculate">Розрахувати</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var input = $('#result');
+      var result = 0;
+      var operator = '';
+
+      $('.number').click(function() {
+        var number = $(this).text();
+        input.val(input.val() + number);
+      });
+
+      $('.operation').click(function() {
+        operator = $(this).text();
+        result = parseFloat(input.val());
+        input.val('');
+      });
+
+      $('#calculate').click(function() {
+        var currentValue = parseFloat(input.val());
+        switch (operator) {
+          case '+':
+            result += currentValue;
+            break;
+          case '-':
+            result -= currentValue;
+            break;
+          case '*':
+            result *= currentValue;
+            break;
+          case '/':
+            result /= currentValue;
+            break;
+        }
+        input.val(result);
+        result = 0;
+        operator = '';
+      });
+    });
+  </script>
+</body>
+</html>

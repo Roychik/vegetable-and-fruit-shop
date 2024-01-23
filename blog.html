@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мій персональний блог</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .post {
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .post h2 {
+      margin-top: 0;
+    }
+
+    .post-date {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
+      margin-bottom: 10px;
+    }
+
+    .comments {
+      margin-top: 20px;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .comment-author {
+      font-weight: bold;
+    }
+
+    .comment-date {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .comment-content {
+      margin-bottom: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .form-group button {
+      background-color: #333;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Мій персональний блог</h1>
+  </header>
+
+  <div class="container">
+    <h2>Останні повідомлення</h2>
+
+    <div class="post">
+      <h2>Заголовок повідомлення 1</h2>
+      <div class="post-date">Дата публікації: 1 січня 2023</div>
+      <div class="post-content">
+        <p>Текст повідомлення 1</p>
+      </div>
+      <div class="comments">
+        <h3>Коментарі (2)</h3>
+        <div class="comment">
+          <div class="comment-author">Автор коментаря 1</div>
+          <div class="comment-date">Дата коментаря: 2 січня 2023</div>
+          <div class="comment-content">Текст коментаря 1</div>
+        </div>
+        <div class="comment">
+          <div class="comment-author">Автор коментаря 2</div>
+          <div class="comment-date">Дата коментаря: 3 січня 2023</div>
+          <div class="comment-content">Текст коментаря 2</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <h2>Заголовок повідомлення 2</h2>
+      <div class="post-date">Дата публікації: 4 січня 2023</div>
+      <div class="post-content">
+        <p>Текст повідомлення 2</p>
+      </div>
+      <div class="comments">
+        <h3>Коментарі (1)</h3>
+        <div class="comment">
+          <div class="comment-author">Автор коментаря 3</div>
+          <div class="comment-date">Дата коментаря: 5 січня 2023</div>
+          <div class="comment-content">Текст коментаря 3</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Додайте інші повідомлення -->
+
+    <h2>Додати нове повідомлення</h2>
+    <form id="new-post-form">
+      <div class="form-group">
+        <label for="post-title">Заголовок</label>
+        <input type="text" id="post-title" required>
+      </div>
+      <div class="form-group">
+        <label for="post-content">Текст повідомлення</label>
+        <textarea id="post-content" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Опублікувати</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.querySelector('#new-post-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var title = document.querySelector('#post-title').value;
+      var content = document.querySelector('#post-content').value;
+
+      // Додавання нового повідомлення до блогу
+
+      // Очистити поля форми після додавання повідомлення
+      document.querySelector('#post-title').value = '';
+      document.querySelector('#post-content').value = '';
+    });
+  </script>
+</body>
+</html>

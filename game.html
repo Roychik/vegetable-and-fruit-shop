@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Вгадай слово</title>
+  <style>
+    .game-container {
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .word-display {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #letter-input {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    #submit-letter-btn {
+      padding: 10px;
+    }
+
+    .progress-display {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .answer-display {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h2>Вгадай слово</h2>
+    <div class="word-display"></div>
+    <input type="text" id="letter-input" placeholder="Введіть літеру">
+    <button id="submit-letter-btn">Підтвердити</button>
+    <div class="progress-display"></div>
+    <div class="answer-display"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      let words = ['apple', 'banana', 'cherry', 'orange', 'strawberry'];
+      let word = generateRandomWord(words);
+
+      $('.word-display').text(getHiddenWord(word));
+
+      let incorrectGuesses = 0;
+      let maxIncorrectGuesses = 6;
+      let guessedLetters = [];
+
+      $('#submit-letter-btn').click(function() {
+        let letter = $('#letter-input').val().toLowerCase();
+
+        if (letter.length === 1) {
+          if (guessedLetters.includes(letter)) {
+            $('.answer-display').text('Ви вже вгадали цю літеру.');
+          } else {
+            guessedLetters.push(letter);
+
+            if (word.includes(letter)) {
+              let newWordDisplay = getUpdatedWordDisplay(word, guessedLetters);
+              $('.word-display').text(newWordDisplay);
+              $('.answer-display').empty();
+
+              if (newWordDisplay === word) {
+                $('.answer-display').text('Вітаємо! Ви вгадали слово.');
+                $('#submit-letter-btn').prop('disabled', true);
+              }
+            } else {
+              incorrectGuesses++;
+              $('.answer-display').text('Ця літера не присутня в слові. Спробуйте ще раз.');
+
+              if (incorrectGuesses === maxIncorrectGuesses) {
+                $('.answer-display').text('Ви вичерпали всі спроби. Слово було: ' + word);
+                $('#submit-letter-btn').prop('disabled', true);
+              }
+            }
+
+            $('#letter-input').val('');
+          }
+        } else {
+          $('.answer-display').text('Введіть одну літеру.');
+        }
+      });
+
+      function generateRandomWord(words) {
+        return words[Math.floor(Math.random() * words.length)];
+      }
+
+      function getHiddenWord(word) {
+        let hiddenWord = '';
+
+        for (let i = 0; i < word.length; i++) {
+          hiddenWord += '-';
+        }
+
+        return hiddenWord;
+      }
+
+      function getUpdatedWordDisplay(word, guessedLetters) {
+        let updatedWordDisplay = '';
+
+        for (let i = 0; i < word.length; i++) {
+          if (guessedLetters.includes(word[i])) {
+            updatedWordDisplay += word[i];
+          } else {
+            updatedWordDisplay += '-';
+          }
+        }
+
+        return updatedWordDisplay;
+      }
+    });
+  </script>
+</body>
+</html>

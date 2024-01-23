@@ -1,0 +1,37 @@
+.todo-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .todo-list li {
+    margin-bottom: 10px;
+  }
+
+  .todo-list li.completed {
+    text-decoration: line-through;
+    color: #999;
+  }
+
+  .cancel-btn {
+    color: red;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  #add-task-btn {
+    display: block;
+    margin-top: 10px;
+  }

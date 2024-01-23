@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Оплата</title>
+  <style>
+    form {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form id="payment-form">
+    <input type="text" id="card-number" placeholder="Номер кредитної картки">
+    <input type="text" id="expiry-date" placeholder="ММ/РР">
+    <input type="text" id="cvv" placeholder="CVV">
+    <input type="text" id="card-owner" placeholder="Ім'я власника картки">
+    <button type="submit" id="pay-btn">Заплатити</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#payment-form').submit(function(event) {
+        event.preventDefault();
+
+        // Отримання значень полів введення
+        var cardNumber = $('#card-number').val();
+        var expiryDate = $('#expiry-date').val();
+        var cvv = $('#cvv').val();
+        var cardOwner = $('#card-owner').val();
+
+        // Перевірка валідності даних
+        if (validateCardDetails(cardNumber, expiryDate, cvv, cardOwner)) {
+          // Симуляція оплати
+          simulatePayment(cardNumber, cardOwner);
+
+          // Очищення форми
+          $('#card-number').val('');
+          $('#expiry-date').val('');
+          $('#cvv').val('');
+          $('#card-owner').val('');
+
+          // Виведення повідомлення про успішну оплату
+          alert('Оплата успішно здійснена!');
+        } else {
+          // Виведення повідомлення про помилку
+          alert('Будь ласка, перевірте правильність введених даних картки.');
+        }
+      });
+
+      function validateCardDetails(cardNumber, expiryDate, cvv, cardOwner) {
+        // Перевірка валідності номеру кредитної картки, дати закінчення терміну дії, CVV-коду та імені власника картки
+        // Ви можете додати власні правила валідації тут
+        return cardNumber.length === 16 && expiryDate.match(/^\d{2}\/\d{2}$/) && cvv.length === 3 && cardOwner.length > 0;
+      }
+
+      function simulatePayment(cardNumber, cardOwner) {
+        // Виконання симуляції оплати
+        // Ви можете додати власний код для обробки оплати тут
+        console.log('Оплата здійснена для картки ' + cardNumber + ' власника ' + cardOwner);
+      }
+    });
+  </script>
+</body>
+</html>

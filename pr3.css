@@ -1,0 +1,30 @@
+.gallery {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .filter-nav {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .filter-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .filter-btn.active {
+    background-color: #ddd;
+  }
+
+  .gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-images img {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+  }

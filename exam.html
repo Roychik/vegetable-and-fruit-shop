@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="slick.less"> -->
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="exam.css">
+    <title>Продажа фруктів та овочів</title>
+    <link rel="shortcut icon" href="/images/Логотип.png" type="image/png">
+    <title img = "https://assets.turbologo.ru/blog/ru/2019/05/18163736/RED-RICH.png"></title>
+
+</head>
+<body>
+    
+    <ul class="menu">
+        <img src="https://assets.turbologo.ru/blog/ru/2019/05/18163736/RED-RICH.png" alt="">
+        <li class="item_menu"><a  href="#main"  class="link"> <b>Main</b>  </a></li>
+        <li class="item_menu"><a href="#catalog" class="link"> <b>Fruits</b> </a></li>
+        <li class="item_menu"><a href="#goods" class="link"> <b>Vegetadle</b></a></li>
+        <div class="search-box">
+            <input type="text" name="" class="search-txt" placeholder="Type to search" />
+            <a class="search-btn" href="#">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>        
+        <li class="item_menu"><a href="#contacts" class="link"> <b>Contacts</b> </a></li>
+    </ul>
+    <!-- <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+        <li class="main"><a  href="#main"  class="link">Main</a></li>  
+        <li class="catalog"><a  href="#catalog" class="link">Catalog</a></li>
+        <li class="goods"><a  href="#goods" class="link">Goods</a></li>
+        <li class="contacts"><a  href="#contacts">Contacts</a></li>
+    </div>
+    </div> -->
+    <div id="main">
+        
+        <button id="modal_btn">Registration</button>
+        <div class="modal_window">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="forma">
+                    <form action="" id="form">
+                        <p>Name</p>
+                        <p class="name"><input type="text" placeholder="Name" ></p>
+                        <p>Surname</p>
+                        <p class="surname"><input type="text"  placeholder="Enter surname" ></p>
+                        <p>Email</p>
+                        <p class="email"><input type="email"  placeholder="Enter email"></p>
+                        <p class="sumbit"><input type="submit"></p>
+                    </form>
+                </div>
+            </div>
+        </div> 
+        <!-- <div class="btn">Shop now</div>        -->
+    </div>
+    <!-- <div id="catalog">
+        <p class="but active">Fruits</p>
+        <h1>Catalog</h1>
+        <div id = "slider">
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1371169841/photo/pomegranates-on-the-cutting-board-on-the-old-wooden-kitchen-table-vegan-and-vegetarian-food.jpg?b=1&s=170667a&w=0&k=20&c=A5vt9MogAiVKXDcjANshSIyshO7L7zi4hV5ZUbNVz-I="alt="">
+                <div class="name-price">
+                    <p class="price">Price:    <b>4$/kg</b> </p>
+                    <p>Garnet</p>
+                </div>
+              
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1312267010/photo/background-of-many-banana-pieces-overhead-view-studio-food-photography.jpg?b=1&s=170667a&w=0&k=20&c=yToK-4a_SOvaNxJabDAwYKoK_XfUuzWQNMX1U8AEgeU=" alt="">
+                <div class="name-price">
+                    <p class="price">Price:    <b>2$/kg</b> </p>
+                    <p>Banana</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1365099869/photo/six-apples.jpg?b=1&s=170667a&w=0&k=20&c=ZJI2fLOE6a0aCU-4BBg9qDYht3wH29GD3V_ThqpLfl8=" alt="">
+                <div class="name-price">
+                    <p class="price">Price:   <b>5$/kg</b> </p>
+                    <p>Apple</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/672613170/photo/orange-slices-isolated-on-white.jpg?b=1&s=170667a&w=0&k=20&c=ka70zE4DNhygCHpWfT2ivWvIIyb2x26bWqcdo5yuz44="alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>6$/kg</b> </p>
+                    <p>Orange</p>
+                </div>
+                 
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1351951140/photo/fresh-ripe-red-seedless-grapes-on-wood-table.jpg?b=1&s=170667a&w=0&k=20&c=YtaRyKGTGOPHy_GNiOD_A0S7YUVbcOrxBGjd3Xi0fRQ=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>4$/kg</b> </p>
+                    <p>Grape</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1359174680/photo/harvest-of-ripe-red-strawberries-in-container-on-a-sunny-summer-day.jpg?b=1&s=170667a&w=0&k=20&c=rRy2GfoOTRmltd3li1gp986DlEuBJlTrnQHXJhtETL8=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>6$/kg</b> </p>
+                    <p>Strawberry</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/529964085/photo/mango.jpg?b=1&s=170667a&w=0&k=20&c=hFGaO42gm2PncUDCwHfb14ZJeUnxWkY9k_4EHXhk7ik=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>6$/kg</b> </p>
+                    <p>Mango</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1364034447/photo/fresh-pitahaya-on-white-background-dragon-fruit.jpg?b=1&s=170667a&w=0&k=20&c=XtmFioUKOZygcqeAcPqMEjSO9ZZMGUET3REX3xVVgwk=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>6$/kg</b> </p>
+                    <p>Dragon fruit</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://cdn.pixabay.com/photo/2017/04/28/17/12/raspberries-2268901__340.jpg" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>6$/kg</b> </p>
+                    <p>Raspberry</p>
+                </div>
+            </div>
+        </div>
+    </div>     -->
+
+    <!-- <div class="all">
+        <input checked type="radio" name="respond" id="desktop">
+        <article id="slider"> 
+            <input checked type="radio" name="slider" id="swich1">
+            <input type="radio" name="slider" id="swich2">
+            <input type="radio" name="slider" id="swich3">
+            <input type="radio" name="slider" id="swich4">
+            <input type="radio" name="slider" id="swich5">
+            <div id="slides">
+                <div id="overflow">
+                    <div id="image">
+                        <article><img src="https://media.istockphoto.com/id/1371169841/photo/pomegranates-on-the-cutting-board-on-the-old-wooden-kitchen-table-vegan-and-vegetarian-food.jpg?b=1&s=170667a&w=0&k=20&c=A5vt9MogAiVKXDcjANshSIyshO7L7zi4hV5ZUbNVz-I="></article>
+                        <article><img src="https://media.istockphoto.com/id/1312267010/photo/background-of-many-banana-pieces-overhead-view-studio-food-photography.jpg?b=1&s=170667a&w=0&k=20&c=yToK-4a_SOvaNxJabDAwYKoK_XfUuzWQNMX1U8AEgeU="></article>
+                        <article><img src="https://media.istockphoto.com/id/1365099869/photo/six-apples.jpg?b=1&s=170667a&w=0&k=20&c=ZJI2fLOE6a0aCU-4BBg9qDYht3wH29GD3V_ThqpLfl8="></article>
+                        <article><img src="https://media.istockphoto.com/id/672613170/photo/orange-slices-isolated-on-white.jpg?b=1&s=170667a&w=0&k=20&c=ka70zE4DNhygCHpWfT2ivWvIIyb2x26bWqcdo5yuz44="></article>
+                        <article><img src="https://media.istockphoto.com/id/1351951140/photo/fresh-ripe-red-seedless-grapes-on-wood-table.jpg?b=1&s=170667a&w=0&k=20&c=YtaRyKGTGOPHy_GNiOD_A0S7YUVbcOrxBGjd3Xi0fRQ="></article>
+                        <article><img src="https://media.istockphoto.com/id/1359174680/photo/harvest-of-ripe-red-strawberries-in-container-on-a-sunny-summer-day.jpg?b=1&s=170667a&w=0&k=20&c=rRy2GfoOTRmltd3li1gp986DlEuBJlTrnQHXJhtETL8="></article>
+                        <article><img src="https://cdn.pixabay.com/photo/2017/04/28/17/12/raspberries-2268901__340.jpg"></article>
+                        <article><img src="https://media.istockphoto.com/id/529964085/photo/mango.jpg?b=1&s=170667a&w=0&k=20&c=hFGaO42gm2PncUDCwHfb14ZJeUnxWkY9k_4EHXhk7ik="></article>
+                        <article><img src="https://media.istockphoto.com/id/1364034447/photo/fresh-pitahaya-on-white-background-dragon-fruit.jpg?b=1&s=170667a&w=0&k=20&c=XtmFioUKOZygcqeAcPqMEjSO9ZZMGUET3REX3xVVgwk="></article>
+                    </div>
+                </div>
+            </div>
+            <div id="controls">
+                <label for="swich1"></label>
+                <label for="swich2"></label>
+                <label for="swich3"></label>
+                <label for="swich4"></label>
+                <label for="swich5"></label>
+            </div>
+            <div id="active">
+                <label for="swich1"></label>
+                <label for="swich2"></label>
+                <label for="swich3"></label>
+                <label for="swich4"></label>
+                <label for="swich5"></label>
+            </div>
+        </article>
+    </div> -->
+    <!-- <div id="app">
+        <div class="slider-containner">
+          <div class="carusel-containner">
+            <span id="left"></span>
+            <ul class="slider-items-containner">
+              <li>
+                <img
+                  src="https://www.leedam.com/uploads/1/3/9/7/13978721/usk-960x500.jpg"
+                  id="lastClone"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://indiafacts.org/wp-content/uploads/2019/11/Equality-vs.-Nature-How-Hierarchy-can-Help-us-Save-the-Planet-960x500.jpg"
+                />
+              </li>
+  
+              <li>
+                <img
+                  src="https://www.minnesotauncorked.com/wp-content/uploads/2019/03/million-hazelnut-campaign-960x500.png"
+                />
+              </li>
+  
+              <li>
+                <img
+                  src="https://blog.aquacarpatica.com/english/wp-content/uploads/2018/02/rsz_dsc09790_pr_a-min-960x500.jpg"
+                />
+              </li>
+  
+              <li>
+                <img
+                  src="https://www.leedam.com/uploads/1/3/9/7/13978721/usk-960x500.jpg"
+                />
+              </li>
+  
+              <li>
+                <img
+                  src="https://indiafacts.org/wp-content/uploads/2019/11/Equality-vs.-Nature-How-Hierarchy-can-Help-us-Save-the-Planet-960x500.jpg"
+                  id="firstClone"
+                />
+              </li>
+            </ul>
+            <span id="right"></span>
+            <button id="play">Play</button>
+          </div>
+        </div>
+      </div>
+      <script src="src/index.ts"></script> -->
+
+
+
+
+
+
+        <p class="but1 active">Goods</p>
+        <!-- <p class="description">If you want to buy or look at the price of the product, hover over the photo of this product!</p> -->
+    <div class="main-img">
+        <div class="line">
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/1371169841/photo/pomegranates-on-the-cutting-board-on-the-old-wooden-kitchen-table-vegan-and-vegetarian-food.jpg?b=1&s=170667a&w=0&k=20&c=A5vt9MogAiVKXDcjANshSIyshO7L7zi4hV5ZUbNVz-I=" alt=""></a>
+                <p class="price">Price:    <b>4$/kg</b> </p>
+                <p>Garnet</p>
+                <button class="buy">Buy</button>
+                <h1>Redirected Page</h1>
+                <p>You have been redirected from the main page.</p>
+            </div>
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/1312267010/photo/background-of-many-banana-pieces-overhead-view-studio-food-photography.jpg?b=1&s=170667a&w=0&k=20&c=yToK-4a_SOvaNxJabDAwYKoK_XfUuzWQNMX1U8AEgeU=" alt=""></a>
+                <p class="price">Price:    <b>2$/kg</b> </p>
+                <p>Banana</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/1365099869/photo/six-apples.jpg?b=1&s=170667a&w=0&k=20&c=ZJI2fLOE6a0aCU-4BBg9qDYht3wH29GD3V_ThqpLfl8=" alt=""></a>
+                <p class="price">Price:   <b>5$/kg</b> </p>
+                <p>Apple</p>
+                <button class="buy">Buy</button>
+
+            </div>
+        </div>
+        <div class="line">
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/672613170/photo/orange-slices-isolated-on-white.jpg?b=1&s=170667a&w=0&k=20&c=ka70zE4DNhygCHpWfT2ivWvIIyb2x26bWqcdo5yuz44=" alt=""></a>
+                <p class="price">Price: <b>6$/kg</b> </p>
+                <p>Orange</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/1351951140/photo/fresh-ripe-red-seedless-grapes-on-wood-table.jpg?b=1&s=170667a&w=0&k=20&c=YtaRyKGTGOPHy_GNiOD_A0S7YUVbcOrxBGjd3Xi0fRQ=" alt=""></a>
+                <p class="price">Price: <b>4$/kg</b> </p>
+                <p>Grape</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/1359174680/photo/harvest-of-ripe-red-strawberries-in-container-on-a-sunny-summer-day.jpg?b=1&s=170667a&w=0&k=20&c=rRy2GfoOTRmltd3li1gp986DlEuBJlTrnQHXJhtETL8=" alt=""></a>
+                <p class="price">Price: <b>6$/kg</b> </p>
+                <p>Strawberry</p>
+                <button class="buy">Buy</button>
+
+            </div>
+        </div>
+        <div class="line">
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/529964085/photo/mango.jpg?b=1&s=170667a&w=0&k=20&c=hFGaO42gm2PncUDCwHfb14ZJeUnxWkY9k_4EHXhk7ik=" alt=""></a>
+                <p class="price">Price: <b>6$/kg</b> </p>
+                <p>Mango</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#catalog"><img src="https://media.istockphoto.com/id/1364034447/photo/fresh-pitahaya-on-white-background-dragon-fruit.jpg?b=1&s=170667a&w=0&k=20&c=XtmFioUKOZygcqeAcPqMEjSO9ZZMGUET3REX3xVVgwk=" alt=""></a>
+                <p class="price">Price: <b>6$/kg</b> </p>
+                <p>Dragon fruit</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#catalog"><img src="https://cdn.pixabay.com/photo/2017/04/28/17/12/raspberries-2268901__340.jpg" alt=""></a>
+                <p class="price">Price: <b>6$/kg</b> </p>
+                <p>Raspberry</p>
+                <button class="buy">Buy</button>
+
+            </div>
+        </div> 
+        </div>
+    <hr>
+    <p class="but active">Vegetable</p>
+    <div id="goods">
+        <!-- <h1>Catalog</h1>
+        <div id = "slider1">
+            <div class="slide">
+                <img src="https://cdn.pixabay.com/photo/2014/08/06/20/32/potatoes-411975__340.jpg" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>1$/kg</b> </p>
+                    <p>Potato</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1045761832/photo/fresh-green-cucumber-salad.jpg?b=1&s=170667a&w=0&k=20&c=j01n7bAO7Z4vYKQKLx9_IQTSPDyAYESqRhOTb1h-6aQ=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>2$/kg</b> </p>
+                    <p>Cucumber</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/941825878/photo/tomato-with-slice-isolated-with-clipping-path.jpg?b=1&s=170667a&w=0&k=20&c=4xZRGq9-uqzi5EWG27y-aroAyLOZMm3qwAdE7ynevFI=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>3$/kg</b> </p>
+                    <p>Tomato</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/535910387/photo/ripe-organic-green-salad-romano.jpg?b=1&s=170667a&w=0&k=20&c=qwR1sEwZDv-yYVNvT97WSckD5Cr0MqS2515jVvVCmVI=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>2$/kg</b> </p>
+                    <p>Lettuce</p>
+                </div>
+            
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/1446720317/photo/jalapeno-peppers.jpg?b=1&s=170667a&w=0&k=20&c=w4K1oOMMVOn4KTk5uiRnjumqjcoqunmmMlKhs76K280=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>   4$/kg</b></p>
+                    <p>Pepper</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://cdn.pixabay.com/photo/2014/04/09/15/31/paprika-320138__340.jpg" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>3$/kg</b> </p>
+                    <p>Paprika</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/512525678/photo/sliced-eggplant-on-cutting-board.jpg?b=1&s=170667a&w=0&k=20&c=7QLLyzk_LBeFfnOwnouLUD8iR1yyX__VFibKtdQ70Kc=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>4$/kg</b> </p>
+                    <p>Eggplant</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/493446908/photo/fresh-sliced-beetroot-on-wooden-surface.jpg?b=1&s=170667a&w=0&k=20&c=auQxvZuXR31RkFYXBKle7Ro9669d2dsCSHiyDkvPh-M=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>5$/kg</b> </p>
+                    <p>Beet</p>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="https://media.istockphoto.com/id/675895822/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%B7%D0%BC%D1%96%D1%88%D0%B0%D0%BD%D1%96-%D0%B1%D0%BE%D0%B1%D0%B8-%D0%B2%D0%B8%D0%B4%D1%96%D0%BB%D0%B5%D0%BD%D1%96-%D0%BD%D0%B0-%D0%B1%D1%96%D0%BB%D0%BE%D0%BC%D1%83-%D1%82%D0%BB%D1%96-%D1%81%D1%83%D1%88%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B0%D1%80%D0%B0%D1%85%D1%96%D1%81-%D1%87%D0%BE%D1%80%D0%BD%D0%B0-%D0%BA%D0%B2%D0%B0%D1%81%D0%BE%D0%BB%D1%8F-%D1%81%D0%BE%D1%94%D0%B2%D1%96-%D0%B1%D0%BE%D0%B1%D0%B8-%D1%87%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%B0-%D0%BA%D0%B2%D0%B0%D1%81%D0%BE%D0%BB%D1%8F.jpg?s=612x612&w=0&k=20&c=5hJ80vFNZjkh8g3EP2VM8S9a7pk_hmVDUi5FF6xfbU0=" alt="">
+                <div class="name-price">
+                    <p class="price">Price: <b>5$/kg</b> </p>
+                    <p>Beans</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>     -->
+    <p class="but1 active">Goods</p>
+    <!-- <p class="description">If you want to buy or look at the price of the product, hover over the photo of this product!</p> -->
+
+    <div class="main-img">
+        <div class="line">
+            <div class="tovar"><a href="#goods"><img src="https://cdn.pixabay.com/photo/2014/08/06/20/32/potatoes-411975__340.jpg" alt=""></a>
+                <p class="price">Price: <b>1$/kg</b> </p>
+                <p>Potato</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/1045761832/photo/fresh-green-cucumber-salad.jpg?b=1&s=170667a&w=0&k=20&c=j01n7bAO7Z4vYKQKLx9_IQTSPDyAYESqRhOTb1h-6aQ=" alt=""></a>
+                <p class="price">Price: <b>2$/kg</b> </p>
+                <p>Cucumber</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/941825878/photo/tomato-with-slice-isolated-with-clipping-path.jpg?b=1&s=170667a&w=0&k=20&c=4xZRGq9-uqzi5EWG27y-aroAyLOZMm3qwAdE7ynevFI=" alt=""></a>
+                <p class="price">Price: <b>3$/kg</b> </p>
+                <p>Tomato</p>
+                <button class="buy">Buy</button>
+                
+            </div>
+        </div>
+        <div class="line">
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/535910387/photo/ripe-organic-green-salad-romano.jpg?b=1&s=170667a&w=0&k=20&c=qwR1sEwZDv-yYVNvT97WSckD5Cr0MqS2515jVvVCmVI=" alt=""></a>
+                <p class="price">Price: <b>2$/kg</b> </p>
+                <p>Lettuce</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/1446720317/photo/jalapeno-peppers.jpg?b=1&s=170667a&w=0&k=20&c=w4K1oOMMVOn4KTk5uiRnjumqjcoqunmmMlKhs76K280=" alt=""></a>
+                <p class="price">Price: <b>   4$/kg</b></p>
+                <p>Pepper</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#goods"><img src="https://cdn.pixabay.com/photo/2014/04/09/15/31/paprika-320138__340.jpg" alt=""></a>
+                <p class="price">Price: <b>3$/kg</b> </p>
+                <p>Paprika</p>
+                <button class="buy">Buy</button>
+
+            </div>
+        </div>
+        <div class="line">
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/512525678/photo/sliced-eggplant-on-cutting-board.jpg?b=1&s=170667a&w=0&k=20&c=7QLLyzk_LBeFfnOwnouLUD8iR1yyX__VFibKtdQ70Kc=" alt=""></a>
+                <p class="price">Price: <b>4$/kg</b> </p>
+                <p>Eggplant</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/493446908/photo/fresh-sliced-beetroot-on-wooden-surface.jpg?b=1&s=170667a&w=0&k=20&c=auQxvZuXR31RkFYXBKle7Ro9669d2dsCSHiyDkvPh-M=" alt=""></a>
+                <p class="price">Price: <b>5$/kg</b> </p>
+                <p>Beet</p>
+                <button class="buy">Buy</button>
+
+            </div>
+            <div class="tovar"><a href="#goods"><img src="https://media.istockphoto.com/id/675895822/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%B7%D0%BC%D1%96%D1%88%D0%B0%D0%BD%D1%96-%D0%B1%D0%BE%D0%B1%D0%B8-%D0%B2%D0%B8%D0%B4%D1%96%D0%BB%D0%B5%D0%BD%D1%96-%D0%BD%D0%B0-%D0%B1%D1%96%D0%BB%D0%BE%D0%BC%D1%83-%D1%82%D0%BB%D1%96-%D1%81%D1%83%D1%88%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B0%D1%80%D0%B0%D1%85%D1%96%D1%81-%D1%87%D0%BE%D1%80%D0%BD%D0%B0-%D0%BA%D0%B2%D0%B0%D1%81%D0%BE%D0%BB%D1%8F-%D1%81%D0%BE%D1%94%D0%B2%D1%96-%D0%B1%D0%BE%D0%B1%D0%B8-%D1%87%D0%B5%D1%80%D0%B2%D0%BE%D0%BD%D0%B0-%D0%BA%D0%B2%D0%B0%D1%81%D0%BE%D0%BB%D1%8F.jpg?s=612x612&w=0&k=20&c=5hJ80vFNZjkh8g3EP2VM8S9a7pk_hmVDUi5FF6xfbU0=" alt=""></a>
+                <p class="price">Price: <b>5$/kg</b> </p>
+                <p>Beans</p>
+                <button class="buy">Buy</button>
+            </div>
+        </div> 
+        <div
+        id="busket" class="busket">Bucket: 0
+        </div>
+        </div>
+        <button>
+                 
+        </button>
+        <!-- <div id="accordion1">
+            <h3>Whole companies</h3>
+            <div>Increase online sales: The primary goal of any e-commerce website is to generate sales, and this should be the main objective of a website selling fruits and vegetables as well. Increasing the number of online sales should be the top priority.
+
+                Enhance customer experience: The website should be designed to provide a user-friendly experience to customers. It should be easy to navigate, visually appealing, and offer all the necessary information about the products.</div>
+            <h3>Whole companies 2</h3>
+            <div>Improve customer retention: It is important to encourage customers to return to the website for repeat purchases. The website should offer incentives such as loyalty programs, discounts, and promotions to encourage customers to come back.
+
+                Expand the customer base: The website should attract new customers and expand the customer base. This can be done through online advertising, social media marketing, and search engine optimization.</div>
+            <h3>The purpose of the company
+            </h3>
+            <div>To become the top online destination for customers seeking high-quality, fresh and healthy produce, by providing a seamless online shopping experience, a wide selection of products, excellent customer service, and a commitment to sustainability and community involvement.
+                </div>
+            <h3>Section 4</h3>
+            <div>Я не знаю що ще тут написати</div>
+        </div> -->
+
+    <div id="contacts">
+        <div class="footer" id="footer">
+            <div class="footer_content_main">
+                <div class="footer_content_1">
+                    <h2 class="footer_header"><b>About company</b></h2>
+                    <p class="footer_text">Our company specializes in online sales of fresh fruits and vegetables. We offer a wide variety of the freshest products, sourced directly from farmers and suppliers. Our online ordering system is easy to use and we guarantee fast delivery of your order. We strive to provide our customers with the highest quality products and excellent customer service.</p>
+                </div>
+                <div class="footer_content_2">
+                    <h2 class="footer_header"><b>Contacts</b></h2>
+                    <ul class="footer_text">
+                        <li class="footer_contacts_element"><a href="tel: +380997620319">Tel: (+380) 99 762 03 19</a></li>
+                        <li class="footer_contacts_element"><a href="">Email: demanrojko@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer_content_3">
+                    <h2><b>Social media</b></h2>
+                    <ul class="footer_text">
+                        <li class="footer_social_element"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i>Instagram</a></li>
+                        <li class="footer_social_element"><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i>YouTube</a></li>
+                        <li class="footer_social_element"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i>Facebook</a></li>
+                        <li class="footer_social_element"><a href="https://twitter.com/?lang=uk"><i class="fa fa-twitter"></i>Twitter</a></li>
+                    </ul>
+                </div>
+                <button id="feedback-btn">Залишити відгук</button>
+
+                <div id="feedback-modal">
+                  <textarea id="feedback-textarea" placeholder="Напишіть ваш відгук тут"></textarea>
+                  <button id="send-btn">Надіслати</button>
+                  <button id="close-btn">×</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- <script src="path-to-the-file/splide.min.js"></script> -->
+    <script src="slick.min.js"></script>
+    <script src="exam1.js"></script> 
+    <script src="exam.ts"></script>
+
+</body>
+</html>

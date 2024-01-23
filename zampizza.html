@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор замовлення піци</title>
+  <style>
+    #pizza-calculator {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2, h3 {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="pizza-calculator">
+    <h2>Калькулятор замовлення піци</h2>
+    <div class="toppings">
+      <h3>Складники:</h3>
+      <label>
+        <input type="checkbox" name="topping" value="cheese"> Сир
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="pepperoni"> Пепероні
+      </label>
+      <label>
+        <input type="checkbox" name="topping" value="mushrooms"> Гриби
+      </label>
+      <!-- Додайте інші складники піци -->
+    </div>
+    <div class="total">
+      <h3>Загальна вартість:</h3>
+      <span id="total-price">$0.00</span>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('input[type="checkbox"]').change(function() {
+        var totalPrice = 0;
+
+        $('input[type="checkbox"]:checked').each(function() {
+          var toppingPrice = calculateToppingPrice($(this).val());
+          totalPrice += toppingPrice;
+        });
+
+        $('#total-price').text('$' + totalPrice.toFixed(2));
+      });
+
+      function calculateToppingPrice(topping) {
+        // Логіка підрахунку вартості складника піци
+        // Повертає вартість складника піци
+        switch (topping) {
+          case 'cheese':
+            return 2.99;
+          case 'pepperoni':
+            return 3.99;
+          case 'mushrooms':
+            return 1.99;
+          // Додайте ціни для інших складників піци
+          default:
+            return 0;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
